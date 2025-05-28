@@ -19,6 +19,7 @@ export function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

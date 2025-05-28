@@ -23,12 +23,16 @@ import {
   Award,
   Star,
   ChevronRight,
+  Laptop,
+  Megaphone,
+  Code,
+  Globe,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 
-export default function HomePage() {
+const HomePageComponent = () => {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Header */}
@@ -78,7 +82,7 @@ export default function HomePage() {
             </Link>
           </nav>
           <Button className="bg-amber-600 hover:bg-amber-700 text-white">
-            <a href="#contact">Get Quote</a>
+            Get Quote
           </Button>
         </div>
       </header>
@@ -89,23 +93,26 @@ export default function HomePage() {
         className="bg-gradient-to-br from-stone-100 to-amber-50 py-20"
       >
         <div className="container mx-auto px-4">
+          {/* Success Message */}
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h2 className="text-5xl font-bold text-stone-800 leading-tight">
-                Crafting Beautiful Furniture for Your
-                <span className="text-amber-600"> Dream Home</span>
+                Your Complete Partner for Furniture, Communications & Technology
+                Solutions
               </h2>
               <p className="text-xl text-stone-600 leading-relaxed">
-                At Mansan Partners, we create custom furniture pieces that blend
-                timeless craftsmanship with modern design. Transform your space
-                with our premium quality furniture solutions.
+                At Mansan Partners, we provide comprehensive solutions spanning
+                custom furniture design, strategic communications, and
+                cutting-edge technology services. We transform spaces and
+                empower businesses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   className="bg-amber-600 hover:bg-amber-700 text-white"
                 >
-                  <a href="#contact">View Our Collection</a>
+                  Explore Our Services
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
                 <Button
@@ -113,7 +120,7 @@ export default function HomePage() {
                   variant="outline"
                   className="border-stone-300 text-stone-700 hover:bg-stone-100"
                 >
-                  <a href="#contact">Schedule Consultation</a>
+                  Schedule Consultation
                 </Button>
               </div>
               <div className="flex items-center space-x-6 pt-4">
@@ -130,7 +137,7 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/sofa.avif?height=500&width=600"
+                src="/placeholder.svg?height=500&width=600"
                 alt="Beautiful living room with custom furniture"
                 width={600}
                 height={500}
@@ -140,7 +147,7 @@ export default function HomePage() {
                 <div className="flex items-center space-x-3">
                   <Award className="w-8 h-8 text-amber-600" />
                   <div>
-                    <p className="font-semibold text-stone-800">25+ Years</p>
+                    <p className="font-semibold text-stone-800">10+ Years</p>
                     <p className="text-sm text-stone-600">Experience</p>
                   </div>
                 </div>
@@ -158,9 +165,9 @@ export default function HomePage() {
               About Mansan Partners
             </h3>
             <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Founded with a passion for exceptional craftsmanship, we've been
-              creating bespoke furniture that tells your story and enhances your
-              lifestyle.
+              Founded to deliver exceptional furniture, communication
+              strategies, and technology solutions, we enhance lifestyles and
+              empower businesses.
             </p>
           </div>
 
@@ -170,17 +177,16 @@ export default function HomePage() {
                 Our Story
               </h4>
               <p className="text-stone-600 leading-relaxed">
-                Mansan Partners began as a small workshop with a big dream: to
-                create furniture that combines traditional craftsmanship with
-                contemporary design. Over the years, we've grown into a trusted
-                name in the furniture industry, serving families and businesses
-                across the region.
+                Mansan Partners began with a vision to integrate furniture
+                design, communication strategies, and technology solutions. Over
+                the years, we've become a trusted partner for homes and
+                businesses seeking comprehensive solutions.
               </p>
               <p className="text-stone-600 leading-relaxed">
-                Every piece we create is a testament to our commitment to
-                quality, sustainability, and customer satisfaction. We believe
-                that furniture should not just fill a space, but enhance the way
-                you live and work.
+                Every service we offer reflects our dedication to quality,
+                innovation, and client satisfaction. We believe in creating
+                holistic solutions that enhance both living and working
+                environments.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="text-center">
@@ -188,14 +194,14 @@ export default function HomePage() {
                   <div className="text-stone-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600">25+</div>
+                  <div className="text-3xl font-bold text-amber-600">10+</div>
                   <div className="text-stone-600">Years Experience</div>
                 </div>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/parlor.avif?height=400&width=500"
+                src="/placeholder.svg?height=400&width=500"
                 alt="Craftsman working on furniture"
                 width={500}
                 height={400}
@@ -214,18 +220,20 @@ export default function HomePage() {
               Our Services
             </h3>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto">
-              From custom designs to restoration, we offer comprehensive
-              furniture solutions tailored to your needs.
+              Comprehensive solutions in furniture design, communications, and
+              technology tailored to your needs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-white border-stone-200 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Hammer className="w-8 h-8 text-amber-600" />
                 </div>
-                <CardTitle className="text-stone-800">Custom Design</CardTitle>
+                <CardTitle className="text-stone-800">
+                  Custom Furniture Design
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-stone-600 text-center">
@@ -238,14 +246,16 @@ export default function HomePage() {
             <Card className="bg-white border-stone-200 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Sofa className="w-8 h-8 text-amber-600" />
+                  <Megaphone className="w-8 h-8 text-amber-600" />
                 </div>
-                <CardTitle className="text-stone-800">Restoration</CardTitle>
+                <CardTitle className="text-stone-800">
+                  Digital Marketing
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-stone-600 text-center">
-                  Breathe new life into your cherished furniture pieces with our
-                  expert restoration services.
+                  Enhance your brand's online presence with our expert digital
+                  marketing strategies.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -253,16 +263,50 @@ export default function HomePage() {
             <Card className="bg-white border-stone-200 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Truck className="w-8 h-8 text-amber-600" />
+                  <Laptop className="w-8 h-8 text-amber-600" />
                 </div>
                 <CardTitle className="text-stone-800">
-                  Delivery & Setup
+                  Computer Solutions
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-stone-600 text-center">
-                  Professional delivery and installation services to ensure your
-                  furniture is perfectly placed.
+                  Tailored computer solutions to optimize your business
+                  operations and enhance productivity.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-stone-200 hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-amber-600" />
+                </div>
+                <CardTitle className="text-stone-800">
+                  Online Applications
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-stone-600 text-center">
+                  Develop innovative online applications to streamline processes
+                  and engage your audience.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-stone-200 hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-amber-600" />
+                </div>
+                <CardTitle className="text-stone-800">
+                  Electronics & Gadgets
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-stone-600 text-center">
+                  Source cutting-edge electronics and gadgets to enhance your
+                  tech infrastructure.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -272,12 +316,14 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-amber-600" />
                 </div>
-                <CardTitle className="text-stone-800">Consultation</CardTitle>
+                <CardTitle className="text-stone-800">
+                  Consultation Services
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-stone-600 text-center">
-                  Expert design consultation to help you choose the perfect
-                  furniture for your space.
+                  Expert consultation across furniture, communications, and
+                  technology to guide your decisions.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -293,7 +339,8 @@ export default function HomePage() {
               Frequently Asked Questions
             </h3>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto">
-              Get answers to common questions about our furniture and services.
+              Get answers to common questions about our furniture,
+              communication, and technology services.
             </p>
           </div>
 
@@ -386,8 +433,8 @@ export default function HomePage() {
               Get In Touch
             </h3>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto">
-              Ready to start your furniture journey? Contact us today for a
-              consultation.
+              Ready to start your furniture, communication, or technology
+              journey? Contact us today for a consultation.
             </p>
           </div>
 
@@ -399,7 +446,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-stone-800 mb-1">Phone</h4>
-                  <p className="text-stone-600">+1 (555) 123-4567</p>
+                  <p className="text-stone-600">08062338872</p>
                   <p className="text-sm text-stone-500">Mon-Fri 9AM-6PM</p>
                 </div>
               </div>
@@ -410,7 +457,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-stone-800 mb-1">Email</h4>
-                  <p className="text-stone-600">info@mansanpartners.com</p>
+                  <p className="text-stone-600">mansanpartners@gmail.com</p>
                   <p className="text-sm text-stone-500">
                     We'll respond within 24 hours
                   </p>
@@ -454,6 +501,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
       {/* Footer */}
       <footer className="bg-stone-800 text-white py-12">
         <div className="container mx-auto px-4">
@@ -553,9 +601,9 @@ export default function HomePage() {
             <div>
               <h5 className="font-semibold mb-4">Contact Info</h5>
               <ul className="space-y-2 text-sm text-stone-400">
-                <li>3 Ahmad Makarfi Road</li>
-                <li>Hanwa New Extension, Zaria</li>
-                <li>+234 806-233-8872</li>
+                <li>123 Craftsman Avenue</li>
+                <li>Furniture District, NY 10001</li>
+                <li>08062338872</li>
                 <li>mansanpartners@gmail.com</li>
               </ul>
             </div>
@@ -571,4 +619,6 @@ export default function HomePage() {
       </footer>
     </div>
   );
-}
+};
+
+export default HomePageComponent;
