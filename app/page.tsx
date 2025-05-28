@@ -46,7 +46,9 @@ const HomePageComponent = () => {
               <h1 className="text-xl font-bold text-stone-800">
                 Mansan Partners
               </h1>
-              <p className="text-xs text-stone-600">Fine Furniture</p>
+              <p className="text-xs text-stone-600">
+                Fine Furniture, Communications & Technology
+              </p>
             </div>
           </div>
           <nav className="hidden md:flex space-x-8">
@@ -82,7 +84,7 @@ const HomePageComponent = () => {
             </Link>
           </nav>
           <Button className="bg-amber-600 hover:bg-amber-700 text-white">
-            Get Quote
+            <a href="#contact">Get Quote</a>
           </Button>
         </div>
       </header>
@@ -112,15 +114,16 @@ const HomePageComponent = () => {
                   size="lg"
                   className="bg-amber-600 hover:bg-amber-700 text-white"
                 >
-                  Explore Our Services
+                  <a href="#contact">Explore Our Services</a>
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
+
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-stone-300 text-stone-700 hover:bg-stone-100"
                 >
-                  Schedule Consultation
+                  <a href="#contact">Schedule Consultation</a>
                 </Button>
               </div>
               <div className="flex items-center space-x-6 pt-4">
@@ -132,12 +135,12 @@ const HomePageComponent = () => {
                     />
                   ))}
                 </div>
-                <span className="text-stone-600">500+ Happy Customers</span>
+                <span className="text-stone-600">100+ Happy Customers</span>
               </div>
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/sofa.avif?height=500&width=600"
                 alt="Beautiful living room with custom furniture"
                 width={600}
                 height={500}
@@ -190,7 +193,7 @@ const HomePageComponent = () => {
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600">500+</div>
+                  <div className="text-3xl font-bold text-amber-600">100+</div>
                   <div className="text-stone-600">Projects Completed</div>
                 </div>
                 <div className="text-center">
@@ -201,7 +204,7 @@ const HomePageComponent = () => {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/parlor.avif?height=400&width=500"
                 alt="Craftsman working on furniture"
                 width={500}
                 height={400}
@@ -447,6 +450,7 @@ const HomePageComponent = () => {
                 <div>
                   <h4 className="font-semibold text-stone-800 mb-1">Phone</h4>
                   <p className="text-stone-600">08062338872</p>
+                  <p className="text-stone-600">08101279027</p>
                   <p className="text-sm text-stone-500">Mon-Fri 9AM-6PM</p>
                 </div>
               </div>
@@ -458,6 +462,7 @@ const HomePageComponent = () => {
                 <div>
                   <h4 className="font-semibold text-stone-800 mb-1">Email</h4>
                   <p className="text-stone-600">mansanpartners@gmail.com</p>
+                  <p className="text-stone-600">mansurmuhd36@gmail.com</p>
                   <p className="text-sm text-stone-500">
                     We'll respond within 24 hours
                   </p>
@@ -471,9 +476,9 @@ const HomePageComponent = () => {
                 <div>
                   <h4 className="font-semibold text-stone-800 mb-1">Address</h4>
                   <p className="text-stone-600">
-                    123 Craftsman Avenue
+                    3 Ahmad Makarfi Road
                     <br />
-                    Furniture District, NY 10001
+                    Hanwa New Extension, Zaria
                   </p>
                 </div>
               </div>
@@ -601,9 +606,9 @@ const HomePageComponent = () => {
             <div>
               <h5 className="font-semibold mb-4">Contact Info</h5>
               <ul className="space-y-2 text-sm text-stone-400">
-                <li>123 Craftsman Avenue</li>
-                <li>Furniture District, NY 10001</li>
-                <li>08062338872</li>
+                <li>3 Ahmad Makarfi Road</li>
+                <li>Hanwa New Extension, Zaria</li>
+                <li>+234 806-233-8872</li>
                 <li>mansanpartners@gmail.com</li>
               </ul>
             </div>
